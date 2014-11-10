@@ -1,36 +1,48 @@
-var people = [];
-people.push({firstName: "Gwenaël", lastName: "HAGENMULLER", oo: false});
-people.push({firstName: "Victor", lastName: "CHANAT", oo: false});
-people.push({firstName: "Alexis", lastName: "CHARVERIAT", oo: false});
-people.push({firstName: "Juri", lastName: "FEDJAEV", oo: false});
-people.push({firstName: "Arnaud", lastName: "JEGLOT", oo: false});
-people.push({firstName: "Maxence", lastName: "LEDUC", oo: false});
-people.push({firstName: "Victor", lastName: "MANENTI", oo: false});
-people.push({firstName: "Nicolas", lastName: "MERCIER", oo: false});
-people.push({firstName: "Vincent", lastName: "RAES", oo: false});
-people.push({firstName: "Ming Ye", lastName: "WANG", oo: false});
-people.push({firstName: "Buyun", lastName: "ZHANG", oo: false});
+var peopleFirstNames = [];
+var peopleLastNames = [];
+var peopleOO = [];
+peopleFirstNames.push("Gwenaël"); peopleLastNames.push("HAGENMULLER"); peopleOO.push(false);
+peopleFirstNames.push("Victor"); peopleLastNames.push("CHANAT"); peopleOO.push(false);
+peopleFirstNames.push("Alexis"); peopleLastNames.push("CHARVERIAT"); peopleOO.push(false);
+peopleFirstNames.push("Juri"); peopleLastNames.push("FEDJAEV"); peopleOO.push(false);
+peopleFirstNames.push("Arnaud"); peopleLastNames.push("JEGLOT"); peopleOO.push(false);
+peopleFirstNames.push("Maxence"); peopleLastNames.push("LEDUC"); peopleOO.push(false);
+peopleFirstNames.push("Victor"); peopleLastNames.push("MANENTI"); peopleOO.push(false);
+peopleFirstNames.push("Nicolas"); peopleLastNames.push("MERCIER"); peopleOO.push(false);
+peopleFirstNames.push("Vincent"); peopleLastNames.push("RAES"); peopleOO.push(false);
+peopleFirstNames.push("Ming Ye"); peopleLastNames.push("WANG"); peopleOO.push(false);
+peopleFirstNames.push("Buyun"); peopleLastNames.push("ZHANG"); peopleOO.push(false);
 
-var done = [];
+var doneFirstNames = [];
+var doneLastNames = [];
+var doneOO = [];
 
 // to debug
-window.done = done;
+window.doneFirstNames = doneFirstNames;
+window.doneLastNames = doneLastNames;
+window.doneOO = doneOO;
 
 var myButton = document.getElementById("next");
 var myTable = document.getElementById("people");
 
 myButton.addEventListener("click", function() {
-    var where = pickOne(people);
-    var who = people[where];
+    var where = pickOne(peopleFirstNames);
+    var firstName = peopleFirstNames[where];
+    var lastName = peopleLastNames[where];
     
-    alert(who.firstName + " " + who.lastName);
+    alert(firstName + " " + lastName);
     
-    addPersonToTable(who.firstName, who.lastName, done.length); 
+    addPersonToTable(firstName, lastName, doneOO.length); 
 
-    people.splice(where, 1);
-    done.push(who);
+    peopleFirstNames.splice(where, 1);
+    peopleLastNames.splice(where, 1);
+    peopleOO.splice(where, 1);
     
-    if (people.length == 0) {
+    doneFirstNames.push(firstName);
+    doneLastNames.push(lastName);
+    doneOO.push(false);
+    
+    if (peopleFirstNames.length == 0) {
         myButton.style.display = "none";
     }
 });
@@ -57,7 +69,6 @@ function addPersonToTable(firstName, lastName, i) {
     cell3.appendChild(element2);
     
     element2.addEventListener("click", function(e,v) {
-        var who = done[i];
-        who.oo = element2.checked;
+        doneOO[i] = element2.checked;
     });
 }
