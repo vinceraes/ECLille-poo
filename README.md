@@ -50,3 +50,8 @@ MCTQ
 ---
 
 http://goo.gl/ufch3Y
+
+VS Express
+----------
+
+http://www.visualstudio.com/fr-fr/products/visual-studio-express-vs.aspx
