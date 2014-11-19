@@ -25,3 +25,23 @@ TypeScript Playground
 ---------------------
 
 http://goo.gl/X7xhqe
+
+TortoiseGit
+-----------
+
+https://code.google.com/p/tortoisegit/wiki/Download
+
+SSH Key
+------
+
+http://withcode.com/2013/07/super-easy-ssh-key-setup-for-github-using-putty-on-windows/ (step 3 and step 4 ; step 5 only if you provide a passphrase for your private key)
+
+OOP references
+--------------
+
+http://openclassrooms.com/courses/apprenez-a-developper-en-c/introduction-a-la-programmation-orientee-objet
+
+Git references
+--------------
+
+http://git-scm.com/book/en/v2
