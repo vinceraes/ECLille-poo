@@ -1,7 +1,12 @@
 ECLille-poo
 ===========
 
-jsfiddle presentation example:
+Prezi
+-----
+
+https://prezi.com/7i17xkfiv2fb/bases-de-loriente-objet-et-du-dev-3d/
+
+jsfiddle presentation example
 -----------------------------
 
 http://jsfiddle.net/gwenaelhagenmuller/pk63z0x1/
@@ -16,7 +21,7 @@ http://jsfiddle.net/BabarElephantKing/7vn86hts/
 +http://jsfiddle.net/StarsMoon/ogxngorL/
 http://jsfiddle.net/maxenceleduc92/uecmv1fL/
 
-TypeScript Playground:
+TypeScript Playground
 ---------------------
 
 http://goo.gl/X7xhqe
